@@ -1,0 +1,25 @@
+{
+  "short_name": "Tech Radar",
+  "name": "Mechanical Rock - Tech Radar",
+  "icons": [
+    {
+      "src": "img/radar-icon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "img/radar-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "img/radar-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

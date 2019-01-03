@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  variables:
+    CI: true
+    REGION: ap-southeast-2
+    WEBSITE_BUCKET: s3://techradar.website-bucket/
+
+phases:
+  pre_build:
+    commands:
+      - cd app
+      - npm i
+      - npm test
+
+  build:
+    commands:
+      - npm run build
+
+  post_build:
+    commands:
+      - rm -rf coverage
+      - aws s3 cp ./build/ $WEBSITE_BUCKET --recursive --acl private

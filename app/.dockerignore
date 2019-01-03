@@ -1,0 +1,9 @@
+node_modules
+build
+aws
+test
+Dockerfile
+package-lock.json
+.dockerignore
+.gitignore
+README.md

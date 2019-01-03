@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  min-height: 50em;
+  display: grid;
+  font-family: "Sarabun", sans-serif;
+}
+
+#root {
+  height: inherit;
+  display: inherit;
+  margin: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}

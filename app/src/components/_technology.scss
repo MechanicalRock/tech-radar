@@ -1,0 +1,40 @@
+.technology {
+  display: inline-flex;
+  width: 100%;
+  margin: auto;
+  margin-left: 1em;
+  p {
+    text-indent: 0;
+    text-align: center;
+    font-size: 0.7em;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    top: 2px;
+  }
+  .circle {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+  }
+  .triangle {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom-width: 20px;
+    border-bottom-style: solid;
+    height: 0;
+    width: 0;
+    p {
+      position: relative;
+      top: 5px;
+      left: -10px;
+      width: 20px;
+      height: 15px;
+    }
+  }
+  h6 {
+    margin: auto 0;
+    text-indent: 1em;
+  }
+}

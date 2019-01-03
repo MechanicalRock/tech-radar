@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StaticSiteBucket should match expected template snapshot 1`] = `
+"Resources:
+  OriginAccessIdentity:
+    Type: 'AWS::CloudFront::CloudFrontOriginAccessIdentity'
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: Cloud front user which will be allowed to access the site s3 bucket
+  MyStaticSiteBucket0830CFE7:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+    DeletionPolicy: Retain
+  MyStaticSiteBucketPolicy88B97D28:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket:
+        Ref: MyStaticSiteBucket0830CFE7
+      PolicyDocument:
+        Statement:
+          - Action: 's3:GetObject'
+            Effect: Allow
+            Principal:
+              CanonicalUser:
+                'Fn::GetAtt':
+                  - OriginAccessIdentity
+                  - S3CanonicalUserId
+            Resource:
+              'Fn::Join':
+                - ''
+                - - 'Fn::GetAtt':
+                      - MyStaticSiteBucket0830CFE7
+                      - Arn
+                  - /*
+        Version: '2012-10-17'
+"
+`;
