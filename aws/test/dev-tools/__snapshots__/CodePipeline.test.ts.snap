@@ -78,6 +78,8 @@ exports[`CodePipeline should match the template snapshot 1`] = `
                 Owner: MechanicalRock
                 Repo: tech-radar
                 Branch: master
+                OAuthToken:
+                  Ref: GitHubOAuthTokenParameter6FA15971
                 PollForSourceChanges: false
               InputArtifacts: []
               Name: GitHub_Source
@@ -241,7 +243,9 @@ exports[`CodePipeline should match the template snapshot 1`] = `
     Type: 'AWS::CodePipeline::Webhook'
     Properties:
       Authentication: GITHUB_HMAC
-      AuthenticationConfiguration: {}
+      AuthenticationConfiguration:
+        SecretToken:
+          Ref: GitHubOAuthTokenParameter6FA15971
       Filters:
         - JsonPath: $.ref
           MatchEquals: 'refs/heads/{Branch}'
@@ -282,5 +286,10 @@ exports[`CodePipeline should match the template snapshot 1`] = `
           - Arn
       Source:
         Type: CODEPIPELINE
+Parameters:
+  GitHubOAuthTokenParameter6FA15971:
+    Type: 'AWS::SSM::Parameter::Value<String>'
+    Default: github-oauth-token
+    NoEcho: true
 "
 `;

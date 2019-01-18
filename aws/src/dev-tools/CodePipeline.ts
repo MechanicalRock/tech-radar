@@ -4,7 +4,7 @@ import {
   PipelineProject,
   LinuxBuildImage
 } from '@aws-cdk/aws-codebuild';
-import { Stack, Secret } from '@aws-cdk/cdk';
+import { Stack, SecretParameter } from '@aws-cdk/cdk';
 import { Role, ServicePrincipal } from '@aws-cdk/aws-iam';
 
 export interface CodePipelineProps {
@@ -76,11 +76,18 @@ export class CodePipeline {
 
   private createSourceStage(): void {
     const stage = this.pipeline.addStage('SourceStage');
+
+    const { value: oauthToken } = new SecretParameter(
+      this.props.stack,
+      'GitHubOAuthToken',
+      { ssmParameter: 'github-oauth-token' }
+    );
+
     new GitHubSourceAction(this.props.stack, 'GitHub_Source', {
       stage,
       owner: 'MechanicalRock',
       repo: 'tech-radar',
-      oauthToken: new Secret()
+      oauthToken
     });
   }
 }
