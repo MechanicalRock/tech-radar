@@ -4,7 +4,7 @@ env:
   variables:
     CI: true
     REGION: ap-southeast-2
-    WEBSITE_BUCKET: s3://techradar.website-bucket/
+    WEBSITE_BUCKET: s3://techradarstaticsitestack-staticsitebucket8958ee3f-6fmeuqatxkuq/
 
 phases:
   pre_build:

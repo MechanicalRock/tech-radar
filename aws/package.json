@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "build": "npm run clean && tsc",
+    "deploy": "npm run build && cdk deploy",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "posttest": "npm run lint",
     "test": "jest",
