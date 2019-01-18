@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cloudfront should match the template snapshot 1`] = `
+"Resources:
+  MySiteBucket1481A238:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+  OriginAccessIdentity:
+    Type: 'AWS::CloudFront::CloudFrontOriginAccessIdentity'
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: Cloud front user which will be allowed to access the site s3 bucket
+  LogsBucket9C4D8843:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+    DeletionPolicy: Retain
+  MyCloudfrontCFDistribution4F715D75:
+    Type: 'AWS::CloudFront::Distribution'
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - techradar.cloud
+          - www.techradar.cloud
+        CacheBehaviors: []
+        Comment: Cloud front distribution for static website
+        CustomErrorResponses:
+          - ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: /
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          CachedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            QueryString: false
+          TargetOriginId: origin1
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        Enabled: true
+        HttpVersion: http2
+        IPV6Enabled: true
+        Logging:
+          Bucket:
+            'Fn::GetAtt':
+              - LogsBucket9C4D8843
+              - DomainName
+          IncludeCookies: false
+        Origins:
+          - DomainName:
+              'Fn::GetAtt':
+                - MySiteBucket1481A238
+                - DomainName
+            Id: origin1
+            S3OriginConfig:
+              OriginAccessIdentity:
+                'Fn::Join':
+                  - ''
+                  - - origin-access-identity/cloudfront/
+                    - Ref: OriginAccessIdentity
+        PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: >-
+            arn:aws:acm:us-east-1:598112752826:certificate/da98edf4-7dc7-4ee8-95d6-82d96bc1a13b
+          SslSupportMethod: sni-only
+Outputs:
+  DistributionDomainName:
+    Value:
+      'Fn::GetAtt':
+        - MyCloudfrontCFDistribution4F715D75
+        - DomainName
+"
+`;

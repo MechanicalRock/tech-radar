@@ -1,0 +1,70 @@
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: background-color 0.2s linear;
+  .modal-dialog {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+    color: #333333;
+    box-shadow: #333333b3 2px 2px 8px 0px;
+    h1 {
+      font-size: 150%;
+      margin: 0 0 15px;
+      color: #333333;
+    }
+    .modal-close {
+      color: #aaa;
+      line-height: 50px;
+      font-size: 80%;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 70px;
+      text-decoration: none;
+      &:hover {
+        color: #000;
+      }
+    }
+    .modal-actions {
+      font-size: 90%;
+      position: relative;
+      margin-top: 1em;
+      margin-bottom: -1em;
+      float: right;
+      a {
+        margin-left: 1em;
+        text-decoration: none;
+        color: rgb(230, 75, 75);
+        &:hover {
+          filter: brightness(75%);
+        }
+      }
+      a[title="OK"] {
+        color: rgb(86, 200, 86);
+      }
+      .-disabled {
+        pointer-events: none;
+        color: #aaa !important;
+      }
+    }
+  }
+}
+
+.modal-window.-open {
+  opacity: 1;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}

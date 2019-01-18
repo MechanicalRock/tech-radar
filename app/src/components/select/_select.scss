@@ -1,0 +1,85 @@
+.dropdown-select {
+  width: 13em;
+  margin: 0.5em auto;
+  .custom-dropdown {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    .icon {
+      position: absolute;
+      height: 100%;
+      top: 0;
+    }
+    .right {
+      right: 1em;
+    }
+    input {
+      width: 100%;
+      padding: 1em;
+      text-align: center;
+      border: 1px #bbb solid;
+      border-radius: 0.2em;
+      text-overflow: "";
+      -webkit-appearance: button;
+      font-size: 1em;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      option {
+        &:first-child {
+          text-transform: uppercase;
+        }
+      }
+    }
+    .value-list {
+      position: absolute;
+      width: 100%;
+      margin-top: 0;
+      padding: 0;
+      list-style: none;
+      box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      max-height: 0;
+      transition: 0.3s ease-in-out;
+      z-index: 1;
+      &.-open {
+        max-height: 320px;
+        overflow: auto;
+      }
+      li {
+        position: relative;
+        height: 4rem;
+        background-color: #fafcfd;
+        padding: 1rem;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        opacity: 1;
+        &:hover {
+          background-color: rgb(75, 224, 212);
+        }
+        &.closed {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .custom-dropdown select[disabled] {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .custom-dropdown select[disabled]::after {
+    color: rgba(0, 0, 0, 0.1);
+  }
+  .custom-dropdown::before {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  .custom-dropdown::after {
+    color: #333;
+  }
+}
