@@ -49,6 +49,14 @@
       "!src/index.tsx",
       "!serviceWorker.js",
       "!setupTests.js"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 73,
+        "branches": 100,
+        "functions": 90,
+        "lines": 73
+      }
+    }
   }
 }

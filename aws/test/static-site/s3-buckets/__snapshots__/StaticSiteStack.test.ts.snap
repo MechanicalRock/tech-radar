@@ -72,7 +72,6 @@ exports[`StaticSiteStack should match the template snapshot 1`] = `
             Cookies:
               Forward: none
             QueryString: false
-          MinTTL: 3600
           TargetOriginId: origin1
           ViewerProtocolPolicy: redirect-to-https
         DefaultRootObject: index.html

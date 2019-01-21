@@ -31,10 +31,9 @@ defineFeature(feature, (test: DefineScenarioFunction) => {
 
   test('Adding a technology', ({ given, when, then }) => {
     given(
-      /^I have decided to add a new technolgy for the "(.*)" Quadrant$/,
+      /^I have decided to add a new technology for the (.*) Quadrant$/,
       (quadrant: string) => {
         wrapper
-          .update()
           .find(MenuItem)
           .filterWhere(node => node.props().ring.name === quadrant)
           .find('.plus-one')
@@ -47,7 +46,7 @@ defineFeature(feature, (test: DefineScenarioFunction) => {
 
     let techName = '';
 
-    when(/^I enter the "(.*)" as the name$/, (name: string) => {
+    when(/^I enter the (.*) as the name$/, (name: string) => {
       techName = name;
       getModalWindow()
         .find('input.text-input')
@@ -59,7 +58,7 @@ defineFeature(feature, (test: DefineScenarioFunction) => {
         });
     });
 
-    when(/^I select "(.*)" as the phase$/, (phase: PhaseType) => {
+    when(/^I select (.*) as the phase$/, (phase: PhaseType) => {
       getModalWindow()
         .find('.value-list')
         .find('li')
@@ -90,7 +89,7 @@ defineFeature(feature, (test: DefineScenarioFunction) => {
     });
 
     then(
-      /^it should be in the "(.*)" ring of the "(.*)" Quadrant$/,
+      /^it should be in the (.*) ring of the (.*) Quadrant$/,
       (phase: string, quadrant: string) => {
         const { left, top } = tech.canvasPosition;
         const actualQuadrant = getRingFactory(left, top);

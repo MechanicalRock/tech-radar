@@ -5,6 +5,7 @@ import { AppAction } from '../../reducers/App';
 import Select from '../select';
 import PhaseType, { phases } from '../../models/Phase';
 import Technology from '../../models/Technology';
+import { Ring } from '../../models/Rings';
 import './_modal.scss';
 
 const ringNames = Object.values(PhaseType);
@@ -20,13 +21,9 @@ interface DispatchProps {
 
 type Props = ReduxProps & DispatchProps;
 
-function Modal(props: Props): JSX.Element {
+export function Modal(props: Props): JSX.Element {
   const [name, setName] = useState('');
   const [phase, setPhase] = useState('');
-
-  function closeModal(): void {
-    cancelAction();
-  }
 
   function handleNameChange(event: React.ChangeEvent<HTMLInputElement>): void {
     setName(event.target.value);
@@ -36,7 +33,7 @@ function Modal(props: Props): JSX.Element {
     event.stopPropagation();
   }
 
-  function cancelAction(): void {
+  function closeModal(): void {
     setName('');
     setPhase('');
     props.dispatch({ type: AppAction.TOGGLE_MODAL_STATE });
@@ -47,7 +44,7 @@ function Modal(props: Props): JSX.Element {
     const technology = new Technology(name, props.activeRing, techPhase);
     technology.setInitialPointInRing();
     props.dispatch({ type: AppAction.ADD_TECHNOLOGY, payload: technology });
-    cancelAction();
+    closeModal();
   }
 
   const invalid = !phase || !name;
@@ -85,7 +82,7 @@ function Modal(props: Props): JSX.Element {
           label="Technology Phase"
         />
         <div className="modal-actions">
-          <a href="#" title="Cancel" onClick={cancelAction}>
+          <a href="#" title="Cancel" onClick={closeModal}>
             cancel
           </a>
           <a
