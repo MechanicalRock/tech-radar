@@ -104,7 +104,7 @@ function Radar(props: Props): JSX.Element {
 }
 
 function mapStateToProps({ AppReducer: state }: ReduxState): ReduxProps {
-  console.log("Technologies JSON", state.technologies); // tslint:disable-line
+  console.log("Technologies JSON", JSON.stringify(state.technologies)); // tslint:disable-line
   return {
     technologies: Object.values(state.technologies)
   };

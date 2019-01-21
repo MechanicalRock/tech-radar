@@ -24,7 +24,7 @@ function Modal(props: Props): JSX.Element {
   const [name, setName] = useState('');
   const [phase, setPhase] = useState('');
 
-  function closeModal(event: React.MouseEvent): void {
+  function closeModal(): void {
     cancelAction();
   }
 

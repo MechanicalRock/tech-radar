@@ -43,8 +43,10 @@ export class Cloudfront {
           behaviors: [
             {
               isDefaultBehavior: true,
+              compress: true,
               allowedMethods: CloudFrontAllowedMethods.GET_HEAD_OPTIONS,
-              cachedMethods: CloudFrontAllowedCachedMethods.GET_HEAD_OPTIONS
+              cachedMethods: CloudFrontAllowedCachedMethods.GET_HEAD_OPTIONS,
+              minTtlSeconds: 3600
             }
           ]
         }
