@@ -67,10 +67,12 @@ exports[`StaticSiteStack should match the template snapshot 1`] = `
             - GET
             - HEAD
             - OPTIONS
+          Compress: true
           ForwardedValues:
             Cookies:
               Forward: none
             QueryString: false
+          MinTTL: 3600
           TargetOriginId: origin1
           ViewerProtocolPolicy: redirect-to-https
         DefaultRootObject: index.html
@@ -125,10 +127,5 @@ Outputs:
       'Fn::GetAtt':
         - staticsitecloudfrontCFDistributionF34126D3
         - DomainName
-  HostedZoneId:
-    Value:
-      Ref: HostedZoneDB99F866
-    Export:
-      Name: 'MyStaticSiteStack:HostedZoneId'
 "
 `;
