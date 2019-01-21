@@ -11,7 +11,7 @@ phases:
     commands:
       - cd app
       - npm i
-      - npm test
+      - npm test -- --coverage
 
   build:
     commands:
@@ -19,5 +19,7 @@ phases:
 
   post_build:
     commands:
-      - rm -rf coverage
-      - aws s3 cp ./build/ $WEBSITE_BUCKET --recursive --acl private
+      # Website with hashed static assets caching strategy
+      - aws s3 cp ./build/ $WEBSITE_BUCKET --exclude "index.html" --exclude "technologies.json" --recursive --acl private --cache-control max-age=31536000,public
+      - aws s3 cp ./build/index.html $WEBSITE_BUCKET --acl private --cache-control no-cache
+      - aws s3 cp ./build/technologies.json $WEBSITE_BUCKET --acl private --cache-control no-cache

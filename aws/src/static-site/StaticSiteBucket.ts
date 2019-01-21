@@ -13,11 +13,11 @@ export class StaticSiteBucket {
   bucket: s3.Bucket;
 
   constructor(private props: StaticSiteBucketProps) {
-    this.bucket = this.create();
+    this.create();
   }
 
   private create() {
-    const bucket = new s3.Bucket(this.props.stack, this.props.logicalName, {
+    this.bucket = new s3.Bucket(this.props.stack, this.props.logicalName, {
       encryption: s3.BucketEncryption.S3Managed
     });
 
@@ -26,8 +26,7 @@ export class StaticSiteBucket {
       new CanonicalUserPrincipal(this.props.originAccessIdentityCanonicalId)
     );
     statement.addAction('s3:GetObject');
-    statement.addResource(bucket.bucketArn + '/*');
-    bucket.addToResourcePolicy(statement);
-    return bucket;
+    statement.addResource(this.bucket.bucketArn + '/*');
+    this.bucket.addToResourcePolicy(statement);
   }
 }
