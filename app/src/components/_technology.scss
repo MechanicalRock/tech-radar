@@ -40,7 +40,9 @@
     text-indent: 1em;
   }
   div[id^="tech-"] {
-    transition: left 1s, top 1s;
+    transition: left 1s, top 1s, width 0.3s, height 0.3s, border-left 0.2s,
+      border-right 0.2s, border-bottom 1.75s, border-bottom-color 2s,
+      background 0.5s linear;
   }
 }
 
