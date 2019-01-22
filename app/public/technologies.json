@@ -1,1 +1,14 @@
-{}
+{
+  "git": {
+    "name": "git",
+    "ring": {
+      "name": "Build",
+      "shape": "circle",
+      "color": "#3f51b5",
+      "startingPosition": { "top": 0, "left": 0 }
+    },
+    "phase": { "type": "Adopt", "ringNo": 0 },
+    "canvasPosition": { "top": 265, "left": 278 },
+    "index": 0
+  }
+}

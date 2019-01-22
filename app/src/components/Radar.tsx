@@ -16,7 +16,7 @@ function onDrag(event: React.DragEvent<HTMLElement>): void {
   const data = { id: event.currentTarget.id, name: event.currentTarget.title };
   const element = document.getElementById(data.id)!;
   event.dataTransfer.setData('text', JSON.stringify(data));
-  event.dataTransfer.setDragImage(element, 20, 20);
+  event.dataTransfer.setDragImage(element, 5, 5);
   event.dataTransfer.dropEffect = 'move';
 }
 
@@ -59,6 +59,7 @@ function Radar(props: Props): JSX.Element {
 
     const data = JSON.parse(event.dataTransfer.getData('text'));
     const element = document.getElementById(data.id)!;
+
     element.style.left = `${canvasX}px`;
     element.style.top = `${canvasY}px`;
 
@@ -104,7 +105,7 @@ function Radar(props: Props): JSX.Element {
 }
 
 function mapStateToProps({ AppReducer: state }: ReduxState): ReduxProps {
-  console.log("Technologies JSON", JSON.stringify(state.technologies)); // tslint:disable-line
+  console.log("Technologies JSON: ", JSON.stringify(state.technologies)); // tslint:disable-line
   return {
     technologies: Object.values(state.technologies)
   };

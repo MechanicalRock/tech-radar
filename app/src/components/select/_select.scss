@@ -9,9 +9,16 @@
       position: absolute;
       height: 100%;
       top: 0;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
     }
     .right {
       right: 1em;
+    }
+    .-open {
+      .icon {
+        transform: rotate(180deg);
+      }
     }
     input {
       width: 100%;
@@ -59,6 +66,9 @@
         transition: background-color 0.3s;
         opacity: 1;
         &:hover {
+          background-color: rgb(75, 224, 212);
+        }
+        &:focus {
           background-color: rgb(75, 224, 212);
         }
         &.closed {
