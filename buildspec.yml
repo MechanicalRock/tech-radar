@@ -9,18 +9,22 @@ env:
 phases:
   pre_build:
     commands:
-      - cd app
+      - cd aws
       - npm i
-      - npm test -- --coverage
+      - npm test -- -u
+      - npm run deploy
 
   build:
     commands:
+      - cd ../app
+      - npm i
+      - npm test -- --coverage
       - npm run build
 
   post_build:
     commands:
       # Website with hashed static assets caching strategy
-      - aws s3 cp ./build/ $WEBSITE_BUCKET --exclude "index.html" --exclude "technologies.json" --recursive --acl private --cache-control max-age=31536000,public
+      - aws s3 cp ./build/ $WEBSITE_BUCKET --exclude "index.html" --exclude "technologies.json" --exclude "service-worker.js" --recursive --acl private --cache-control max-age=31536000,public
       - aws s3 cp ./build/index.html $WEBSITE_BUCKET --acl private --cache-control no-cache
       - aws s3 cp ./build/technologies.json $WEBSITE_BUCKET --acl private --cache-control no-cache
       - aws s3 cp ./build/service-worker.js $WEBSITE_BUCKET --acl private --cache-control no-cache

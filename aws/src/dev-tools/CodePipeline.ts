@@ -22,7 +22,7 @@ export class CodePipeline {
     this.create();
   }
 
-  create() {
+  private create(): void {
     // Create the pipeline
     this.pipeline = new Pipeline(this.props.stack, this.props.logicalName, {
       pipelineName: this.props.pipelineName,
@@ -31,7 +31,6 @@ export class CodePipeline {
 
     this.createCodeBuildRole();
     this.createSourceStage();
-    this.createInfraStage();
     this.createDevStage();
     this.createProdStage();
   }
@@ -56,27 +55,10 @@ export class CodePipeline {
     });
   }
 
-  private createInfraStage(): void {
-    // Deploy Infra
-    const stage = this.pipeline.addStage('InfraStage');
-    const project = this.createCodeBuildProject(
-      'DeployInfra',
-      'infra_buildspec.yml'
-    );
-
-    this.createCodeBuildAction('DeployInfraAction', {
-      project,
-      stage
-    });
-  }
-
   private createDevStage(): void {
     // Dev stage and build & test action
     const stage = this.pipeline.addStage('DevStage');
-    const project = this.createCodeBuildProject(
-      'BuildAndTest',
-      'app_buildspec.yml'
-    );
+    const project = this.createCodeBuildProject('BuildAndTest');
 
     this.createCodeBuildAction('BuildAndTestAction', {
       project,
@@ -84,16 +66,12 @@ export class CodePipeline {
     });
   }
 
-  private createCodeBuildProject(
-    logicalName: string,
-    buildSpec?: string
-  ): PipelineProject {
+  private createCodeBuildProject(logicalName: string): PipelineProject {
     return new PipelineProject(this.props.stack, logicalName, {
       environment: {
         buildImage: LinuxBuildImage.UBUNTU_14_04_NODEJS_10_1_0
       },
-      role: this.codeBuildRole,
-      buildSpec
+      role: this.codeBuildRole
     });
   }
 
