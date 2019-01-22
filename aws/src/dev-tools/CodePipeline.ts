@@ -2,7 +2,8 @@ import { Pipeline, GitHubSourceAction } from '@aws-cdk/aws-codepipeline';
 import {
   PipelineBuildAction,
   PipelineProject,
-  LinuxBuildImage
+  LinuxBuildImage,
+  PipelineBuildActionProps
 } from '@aws-cdk/aws-codebuild';
 import { Stack, SecretParameter } from '@aws-cdk/cdk';
 import { Role, ServicePrincipal } from '@aws-cdk/aws-iam';
@@ -49,7 +50,7 @@ export class CodePipeline {
     const stage = this.pipeline.addStage('ProdStage');
     const project = this.createCodeBuildProject('DeployToProd');
 
-    new PipelineBuildAction(this.props.stack, 'prodDeployAction', {
+    this.createCodeBuildAction('prodDeployAction', {
       project,
       stage
     });
@@ -58,9 +59,12 @@ export class CodePipeline {
   private createInfraStage(): void {
     // Deploy Infra
     const stage = this.pipeline.addStage('InfraStage');
-    const project = this.createCodeBuildProject('DeployInfra');
+    const project = this.createCodeBuildProject(
+      'DeployInfra',
+      'infra_buildspec.yml'
+    );
 
-    new PipelineBuildAction(this.props.stack, 'DeployInfraAction', {
+    this.createCodeBuildAction('DeployInfraAction', {
       project,
       stage
     });
@@ -71,10 +75,10 @@ export class CodePipeline {
     const stage = this.pipeline.addStage('DevStage');
     const project = this.createCodeBuildProject(
       'BuildAndTest',
-      'aws/buildspec.yml'
+      'app_buildspec.yml'
     );
 
-    new PipelineBuildAction(this.props.stack, 'BuildAndTestAction', {
+    this.createCodeBuildAction('BuildAndTestAction', {
       project,
       stage
     });
@@ -91,6 +95,13 @@ export class CodePipeline {
       role: this.codeBuildRole,
       buildSpec
     });
+  }
+
+  private createCodeBuildAction(
+    actionName: string,
+    props: PipelineBuildActionProps
+  ): void {
+    new PipelineBuildAction(this.props.stack, actionName, props);
   }
 
   private createSourceStage(): void {

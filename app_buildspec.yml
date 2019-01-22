@@ -23,3 +23,4 @@ phases:
       - aws s3 cp ./build/ $WEBSITE_BUCKET --exclude "index.html" --exclude "technologies.json" --recursive --acl private --cache-control max-age=31536000,public
       - aws s3 cp ./build/index.html $WEBSITE_BUCKET --acl private --cache-control no-cache
       - aws s3 cp ./build/technologies.json $WEBSITE_BUCKET --acl private --cache-control no-cache
+      - aws s3 cp ./build/service-worker.js $WEBSITE_BUCKET --acl private --cache-control no-cache
