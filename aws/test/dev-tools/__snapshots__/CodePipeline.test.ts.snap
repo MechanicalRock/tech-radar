@@ -45,6 +45,15 @@ exports[`CodePipeline should match the template snapshot 1`] = `
             Effect: Allow
             Resource:
               'Fn::GetAtt':
+                - DeployInfra12589F88
+                - Arn
+          - Action:
+              - 'codebuild:BatchGetBuilds'
+              - 'codebuild:StartBuild'
+              - 'codebuild:StopBuild'
+            Effect: Allow
+            Resource:
+              'Fn::GetAtt':
                 - BuildAndTestB9A2F419
                 - Arn
           - Action:
@@ -95,9 +104,25 @@ exports[`CodePipeline should match the template snapshot 1`] = `
                 Version: '1'
               Configuration:
                 ProjectName:
-                  Ref: BuildAndTestB9A2F419
+                  Ref: DeployInfra12589F88
               InputArtifacts:
                 - Name: Artifact_GitHub_Source
+              Name: DeployInfraAction
+              OutputArtifacts:
+                - Name: Artifact_DeployInfraAction
+              RunOrder: 1
+          Name: InfraStage
+        - Actions:
+            - ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Provider: CodeBuild
+                Version: '1'
+              Configuration:
+                ProjectName:
+                  Ref: BuildAndTestB9A2F419
+              InputArtifacts:
+                - Name: Artifact_DeployInfraAction
               Name: BuildAndTestAction
               OutputArtifacts:
                 - Name: Artifact_BuildAndTestAction
@@ -145,6 +170,51 @@ exports[`CodePipeline should match the template snapshot 1`] = `
     Properties:
       PolicyDocument:
         Statement:
+          - Action:
+              - 'logs:CreateLogGroup'
+              - 'logs:CreateLogStream'
+              - 'logs:PutLogEvents'
+            Effect: Allow
+            Resource:
+              - 'Fn::Join':
+                  - ''
+                  - - 'arn:'
+                    - Ref: 'AWS::Partition'
+                    - ':logs:'
+                    - Ref: 'AWS::Region'
+                    - ':'
+                    - Ref: 'AWS::AccountId'
+                    - ':log-group:/aws/codebuild/'
+                    - Ref: DeployInfra12589F88
+              - 'Fn::Join':
+                  - ''
+                  - - 'arn:'
+                    - Ref: 'AWS::Partition'
+                    - ':logs:'
+                    - Ref: 'AWS::Region'
+                    - ':'
+                    - Ref: 'AWS::AccountId'
+                    - ':log-group:/aws/codebuild/'
+                    - Ref: DeployInfra12589F88
+                    - ':*'
+          - Action:
+              - 's3:GetObject*'
+              - 's3:GetBucket*'
+              - 's3:List*'
+              - 's3:DeleteObject*'
+              - 's3:PutObject*'
+              - 's3:Abort*'
+            Effect: Allow
+            Resource:
+              - 'Fn::GetAtt':
+                  - CodePipelineArtifactsBucketF1E925CF
+                  - Arn
+              - 'Fn::Join':
+                  - ''
+                  - - 'Fn::GetAtt':
+                        - CodePipelineArtifactsBucketF1E925CF
+                        - Arn
+                    - /*
           - Action:
               - 'logs:CreateLogGroup'
               - 'logs:CreateLogStream'
@@ -254,6 +324,22 @@ exports[`CodePipeline should match the template snapshot 1`] = `
         Ref: CodePipelineB74E5936
       TargetPipelineVersion: 1
       RegisterWithThirdParty: true
+  DeployInfra12589F88:
+    Type: 'AWS::CodeBuild::Project'
+    Properties:
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: 'aws/codebuild/nodejs:10.1.0'
+        PrivilegedMode: false
+        Type: LINUX_CONTAINER
+      ServiceRole:
+        'Fn::GetAtt':
+          - CodeBuildRole728CBADE
+          - Arn
+      Source:
+        Type: CODEPIPELINE
   BuildAndTestB9A2F419:
     Type: 'AWS::CodeBuild::Project'
     Properties:
@@ -269,6 +355,7 @@ exports[`CodePipeline should match the template snapshot 1`] = `
           - CodeBuildRole728CBADE
           - Arn
       Source:
+        BuildSpec: aws/buildspec.yml
         Type: CODEPIPELINE
   DeployToProd5A783BE8:
     Type: 'AWS::CodeBuild::Project'

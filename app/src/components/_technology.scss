@@ -3,8 +3,10 @@
   width: 100%;
   margin: auto;
   margin-left: 1em;
+  animation: fadein 1s ease forwards;
+  opacity: 0;
   p {
-    text-indent: 0;
+    text-indent: 0.1em;
     text-align: center;
     font-size: 0.7em;
     color: white;
@@ -36,5 +38,14 @@
   h6 {
     margin: auto 0;
     text-indent: 1em;
+  }
+  div[id^="tech-"] {
+    transition: left 1s, top 1s;
+  }
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
   }
 }

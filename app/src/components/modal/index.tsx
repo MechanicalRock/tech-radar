@@ -82,7 +82,7 @@ export function Modal(props: Props): JSX.Element {
           label="Technology Phase"
         />
         <div className="modal-actions">
-          <a href="#" title="Cancel" onClick={closeModal}>
+          <a href="#" title="Cancel" onClick={closeModal} tabIndex={0}>
             cancel
           </a>
           <a
@@ -90,6 +90,7 @@ export function Modal(props: Props): JSX.Element {
             className={invalid ? '-disabled' : ''}
             title="OK"
             onClick={confirmAction}
+            tabIndex={0}
           >
             OK
           </a>
