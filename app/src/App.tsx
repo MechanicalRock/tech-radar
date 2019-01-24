@@ -7,6 +7,20 @@ import './styles/App.scss';
 import store from './utils/store';
 
 function App(): JSX.Element {
+  // const unresolvedWasm = import('./react_rust_wasm');
+  // let wasm: { big_computation(): void };
+
+  // let handleLogoClick = () => {
+  //   console.log("waiting for magic to happen"); // tslint:disable-line
+  // };
+
+  // useEffect(() => {
+  //   unresolvedWasm.then(result => {
+  //     wasm = result;
+  //   });
+  //   handleLogoClick = wasm.big_computation;
+  // });
+
   return (
     <Provider store={store}>
       <header>
@@ -14,6 +28,7 @@ function App(): JSX.Element {
           className="company-logo"
           src="/img/mech-rock-logo.png"
           alt="Mechanical Rock logo"
+          // onClick={handleLogoClick}
         />
         <img
           className="app-logo"
