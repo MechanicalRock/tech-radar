@@ -2,13 +2,463 @@
   "git": {
     "name": "git",
     "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 258.46665954589844,
+      "left": 308
+    },
+    "index": 0
+  },
+  "React": {
+    "name": "React",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 277,
+      "left": 333
+    },
+    "index": 1
+  },
+  "TypeScript": {
+    "name": "TypeScript",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 273.8333282470703,
+      "left": 384
+    },
+    "index": 2
+  },
+  "Sumo": {
+    "name": "Sumo",
+    "ring": {
+      "name": "Operate",
+      "shape": "triangle",
+      "color": "#009688",
+      "startingPosition": {
+        "top": 620,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 405,
+      "left": 325
+    },
+    "index": 3
+  },
+  "Go": {
+    "name": "Go",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Assess",
+      "ringNo": 2
+    },
+    "canvasPosition": {
+      "top": 151,
+      "left": 384
+    },
+    "index": 4
+  },
+  "CloudFormation": {
+    "name": "CloudFormation",
+    "ring": {
+      "name": "Deploy",
+      "shape": "triangle",
+      "color": "#ff5722",
+      "startingPosition": {
+        "top": 620,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 331,
+      "left": 242
+    },
+    "index": 5
+  },
+  "AWS CDK": {
+    "name": "AWS CDK",
+    "ring": {
+      "name": "Deploy",
+      "shape": "triangle",
+      "color": "#ff5722",
+      "startingPosition": {
+        "top": 620,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 430.25,
+      "left": 243
+    },
+    "index": 6
+  },
+  "CodeBuild": {
+    "name": "CodeBuild",
+    "ring": {
       "name": "Build",
       "shape": "circle",
       "color": "#3f51b5",
-      "startingPosition": { "top": 0, "left": 0 }
+      "startingPosition": {
+        "top": 0,
+        "left": 0
+      }
     },
-    "phase": { "type": "Adopt", "ringNo": 0 },
-    "canvasPosition": { "top": 265, "left": 278 },
-    "index": 0
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 229,
+      "left": 263
+    },
+    "index": 7
+  },
+  "CloudWatch": {
+    "name": "CloudWatch",
+    "ring": {
+      "name": "Operate",
+      "shape": "triangle",
+      "color": "#009688",
+      "startingPosition": {
+        "top": 620,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 355.9666748046875,
+      "left": 316
+    },
+    "index": 8
+  },
+  "Rust": {
+    "name": "Rust",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Hold",
+      "ringNo": 3
+    },
+    "canvasPosition": {
+      "top": 33,
+      "left": 345
+    },
+    "index": 9
+  },
+  "Travis": {
+    "name": "Travis",
+    "ring": {
+      "name": "Build",
+      "shape": "circle",
+      "color": "#3f51b5",
+      "startingPosition": {
+        "top": 0,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 293.9666748046875,
+      "left": 172
+    },
+    "index": 10
+  },
+  "Circle CI": {
+    "name": "Circle CI",
+    "ring": {
+      "name": "Build",
+      "shape": "circle",
+      "color": "#3f51b5",
+      "startingPosition": {
+        "top": 0,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 241.9666748046875,
+      "left": 205
+    },
+    "index": 11
+  },
+  "New Relic": {
+    "name": "New Relic",
+    "ring": {
+      "name": "Operate",
+      "shape": "triangle",
+      "color": "#009688",
+      "startingPosition": {
+        "top": 620,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 382.9666748046875,
+      "left": 387
+    },
+    "index": 12
+  },
+  "CodePipeline": {
+    "name": "CodePipeline",
+    "ring": {
+      "name": "Deploy",
+      "shape": "triangle",
+      "color": "#ff5722",
+      "startingPosition": {
+        "top": 620,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 372.9666748046875,
+      "left": 271
+    },
+    "index": 13
+  },
+  "NodeJS": {
+    "name": "NodeJS",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 303,
+      "left": 354
+    },
+    "index": 14
+  },
+  "Cloud Conformity": {
+    "name": "Cloud Conformity",
+    "ring": {
+      "name": "Operate",
+      "shape": "triangle",
+      "color": "#009688",
+      "startingPosition": {
+        "top": 620,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 348,
+      "left": 411
+    },
+    "index": 15
+  },
+  "Cucumber": {
+    "name": "Cucumber",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 291,
+      "left": 304
+    },
+    "index": 16
+  },
+  "Docker": {
+    "name": "Docker",
+    "ring": {
+      "name": "Build",
+      "shape": "circle",
+      "color": "#3f51b5",
+      "startingPosition": {
+        "top": 0,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 298,
+      "left": 260
+    },
+    "index": 17
+  },
+  "BDD": {
+    "name": "BDD",
+    "ring": {
+      "name": "Build",
+      "shape": "circle",
+      "color": "#3f51b5",
+      "startingPosition": {
+        "top": 0,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Adopt",
+      "ringNo": 0
+    },
+    "canvasPosition": {
+      "top": 267.33331298828125,
+      "left": 279
+    },
+    "index": 18
+  },
+  ".Net": {
+    "name": ".Net",
+    "ring": {
+      "name": "Develop",
+      "shape": "circle",
+      "color": "#9c27b0",
+      "startingPosition": {
+        "top": 0,
+        "left": 600
+      }
+    },
+    "phase": {
+      "type": "Hold",
+      "ringNo": 3
+    },
+    "canvasPosition": {
+      "top": 284,
+      "left": 535
+    },
+    "index": 19
+  },
+  "Kubernetes": {
+    "name": "Kubernetes",
+    "ring": {
+      "name": "Deploy",
+      "shape": "triangle",
+      "color": "#ff5722",
+      "startingPosition": {
+        "top": 620,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 366.33331298828125,
+      "left": 219.66668701171875
+    },
+    "index": 20
+  },
+  "Mu": {
+    "name": "Mu",
+    "ring": {
+      "name": "Deploy",
+      "shape": "triangle",
+      "color": "#ff5722",
+      "startingPosition": {
+        "top": 620,
+        "left": 0
+      }
+    },
+    "phase": {
+      "type": "Trial",
+      "ringNo": 1
+    },
+    "canvasPosition": {
+      "top": 349.6166687011719,
+      "left": 170.66668701171875
+    },
+    "index": 21
   }
 }

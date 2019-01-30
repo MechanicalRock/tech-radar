@@ -1,67 +1,67 @@
 header {
-  margin: auto;
-  display: inline-flex;
-  .company-logo {
-    height: 100px;
-  }
-  .app-logo {
-    height: 75px;
-    margin: auto 25px;
-  }
-  .title {
-    font-weight: bold;
-  }
+    margin: auto;
+    display: inline-flex;
+    .company-logo {
+        height: 100px;
+    }
+    .app-logo {
+        height: 75px;
+        margin: auto 25px;
+    }
+    .title {
+        font-weight: bold;
+    }
 }
 
 main {
-  display: grid;
-  grid-gap: 5em;
-  grid-template-areas: "foo radar";
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto;
-  .radar-container {
-    position: relative;
-    margin: auto;
-    h2 {
-      position: absolute;
-      color: #717171;
+    display: grid;
+    grid-gap: 5em;
+    grid-template-areas: "foo radar";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    .radar-container {
+        position: relative;
+        margin: auto;
+        h2 {
+            position: absolute;
+            color: #717171;
+        }
+        .top {
+            top: 0;
+        }
+        .left {
+            left: 0;
+        }
+        .bottom {
+            top: 550px;
+        }
+        .right {
+            left: 500px;
+        }
+        .technology>div {
+            cursor: pointer;
+        }
     }
-    .top {
-      top: 0;
+    #tech-radar {
+        grid-area: radar;
     }
-    .left {
-      left: 0;
-    }
-    .bottom {
-      bottom: 0;
-    }
-    .right {
-      right: 0;
-    }
-    .technology > div {
-      cursor: pointer;
-    }
-  }
-  #tech-radar {
-    grid-area: radar;
-  }
 }
 
 .text-input {
-  width: 13em;
-  margin: 0.5em auto;
-  input {
-    padding: 1em;
-    text-align: center;
-    border: 1px #bbb solid;
-    border-radius: 0.2em;
-    text-overflow: "";
-    -webkit-appearance: button;
-    font-size: 1em;
-    &:focus {
-      outline: none;
+    width: 13em;
+    margin: 0.5em auto;
+    input {
+        padding: 1em;
+        text-align: center;
+        border: 1px #bbb solid;
+        border-radius: 0.2em;
+        text-overflow: "";
+        -webkit-appearance: button;
+        font-size: 1em;
+        &:focus {
+            outline: none;
+        }
     }
-  }
 }
 
 @import "../components/_technology.scss";
