@@ -1,57 +1,58 @@
 nav {
-  grid-template: "foo";
-  width: 100%;
-  .radar-menu {
-    list-style-type: none;
-    padding-left: 0;
-    li {
-      margin-bottom: 1em;
-      cursor: pointer;
+    grid-template: "foo";
+    width: 100%;
+    margin-left: 6em;
+    .radar-menu {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            margin-bottom: 1em;
+        }
+        .menu-item-content {
+            cursor: pointer;
+            h3 {
+                display: inline;
+                vertical-align: super;
+            }
+        }
+        .chevron {
+            font-family: bullets;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+            margin-right: 0.5em;
+        }
+        .plus-one {
+            position: absolute;
+            border-radius: 100%;
+            box-shadow: #8080806e 1px 1px 1px 1px;
+            margin-left: 0.7em;
+            cursor: pointer;
+            margin-top: 0px;
+            transition: margin-top 0.2s ease, box-shadow 0.3s ease;
+            color: white;
+            background: #40bfb4;
+        }
+        .plus-one:active {
+            margin-top: 1px;
+            box-shadow: #8080806e 1px 0px 1px 1px;
+        }
+        .radar-ring-legend {
+            max-height: 0;
+            transition: max-height 0.4s ease;
+            overflow: hidden;
+            text-indent: 2em;
+            h5 {
+                color: #535353;
+                margin-bottom: 1em;
+            }
+        }
+        .-open {
+            .chevron {
+                transform: rotate(90deg);
+            }
+            .radar-ring-legend {
+                max-height: 30em;
+            }
+        }
     }
-    .menu-item-content {
-      h3 {
-        display: inline;
-        vertical-align: super;
-      }
-    }
-    .chevron {
-      font-family: bullets;
-      transform: rotate(0deg);
-      transition: transform 0.3s ease;
-      margin-right: 0.5em;
-    }
-    .plus-one {
-      position: absolute;
-      border-radius: 100%;
-      box-shadow: #8080806e 1px 1px 1px 1px;
-      margin-left: 0.7em;
-      cursor: pointer;
-      margin-top: 0px;
-      transition: margin-top 0.2s ease, box-shadow 0.3s ease;
-      color: white;
-      background: #40bfb4;
-    }
-    .plus-one:active {
-      margin-top: 1px;
-      box-shadow: #8080806e 1px 0px 1px 1px;
-    }
-    .radar-ring-legend {
-      max-height: 0;
-      transition: max-height 0.4s ease;
-      overflow: hidden;
-      text-indent: 2em;
-      h5 {
-        color: #535353;
-        margin-bottom: 1em;
-      }
-    }
-    .-open {
-      .chevron {
-        transform: rotate(90deg);
-      }
-      .radar-ring-legend {
-        max-height: 30em;
-      }
-    }
-  }
 }
