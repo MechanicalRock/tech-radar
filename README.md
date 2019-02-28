@@ -11,12 +11,10 @@ To make a change to the tech radar technologies
 # Start dev
 
 - install docker
-- cd into the app directory
-- run the following commands
+- run the following command
 
 ```bash
-docker build -t devserver .
-docker run -d -v $PWD:/app -v /app/node_modules -p 3000:3000 --name dev_server --rm devserver
+docker-compose up devserver
 ```
 
 - make changes within the app
