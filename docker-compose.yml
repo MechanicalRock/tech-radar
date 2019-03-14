@@ -1,0 +1,11 @@
+version: '2'
+services:
+  devserver:
+    build:
+      context: ./app
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app:/app:delegated
+      - /app/node_modules
+
