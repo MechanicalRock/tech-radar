@@ -61,6 +61,10 @@ declare enum Color {
   BLUE = '#3f51b5'
 }
 
+declare interface Dict<T> {
+  [x: number | string]: T;
+}
+
 declare interface AppState {
   isModalOpen: boolean;
   activeRing: Ring;
@@ -69,10 +73,6 @@ declare interface AppState {
 
 declare interface ReduxState {
   AppReducer: AppState;
-}
-
-declare interface Dict<T> {
-  [x: number | string]: T;
 }
 
 declare interface String {

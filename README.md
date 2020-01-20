@@ -8,7 +8,7 @@ To make a change to the tech radar technologies
 - clone the app from Github
 - Run the app locally using the instructions below.
 
-# Start dev
+## Start dev
 
 - install docker
 - run the following command

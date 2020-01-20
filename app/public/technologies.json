@@ -1,548 +1,548 @@
 {
-   "TypeScript" : {
-      "phase" : {
-         "ringNo" : 1,
-         "type" : "Trial"
+   "TypeScript": {
+      "phase": {
+         "ringNo": 1,
+         "type": "Trial"
       },
-      "name" : "TypeScript",
-      "index" : 2,
-      "ring" : {
-         "color" : "#9c27b0",
-         "shape" : "circle",
-         "name" : "Develop",
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 0
+      "name": "TypeScript",
+      "index": 2,
+      "ring": {
+         "color": "#9c27b0",
+         "shape": "circle",
+         "name": "Develop",
+         "startingPosition": {
+            "left": 600,
+            "top": 0
          }
       },
-      "canvasPosition" : {
-         "top" : 273.83332824707,
-         "left" : 384
+      "canvasPosition": {
+         "top": 273.83332824707,
+         "left": 384
       }
    },
-   "Circle CI" : {
-      "index" : 11,
-      "ring" : {
-         "color" : "#3f51b5",
-         "shape" : "circle",
-         "name" : "Build",
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 0
+   "Circle CI": {
+      "index": 11,
+      "ring": {
+         "color": "#3f51b5",
+         "shape": "circle",
+         "name": "Build",
+         "startingPosition": {
+            "top": 0,
+            "left": 0
          }
       },
-      "canvasPosition" : {
-         "left" : 205,
-         "top" : 241.966674804688
+      "canvasPosition": {
+         "left": 205,
+         "top": 241.966674804688
       },
-      "name" : "Circle CI",
-      "phase" : {
-         "ringNo" : 1,
-         "type" : "Trial"
+      "name": "Circle CI",
+      "phase": {
+         "ringNo": 1,
+         "type": "Trial"
       }
    },
-   "Go" : {
-      "canvasPosition" : {
-         "left" : 384,
-         "top" : 151
+   "Go": {
+      "canvasPosition": {
+         "left": 384,
+         "top": 151
       },
-      "ring" : {
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 600
+      "ring": {
+         "startingPosition": {
+            "top": 0,
+            "left": 600
          },
-         "name" : "Develop",
-         "shape" : "circle",
-         "color" : "#9c27b0"
+         "name": "Develop",
+         "shape": "circle",
+         "color": "#9c27b0"
       },
-      "index" : 4,
-      "name" : "Go",
-      "phase" : {
-         "type" : "Assess",
-         "ringNo" : 2
+      "index": 4,
+      "name": "Go",
+      "phase": {
+         "type": "Assess",
+         "ringNo": 2
       }
    },
-   "NodeJS" : {
-      "phase" : {
-         "ringNo" : 0,
-         "type" : "Adopt"
+   "NodeJS": {
+      "phase": {
+         "ringNo": 0,
+         "type": "Adopt"
       },
-      "name" : "NodeJS",
-      "canvasPosition" : {
-         "top" : 303,
-         "left" : 354
+      "name": "NodeJS",
+      "canvasPosition": {
+         "top": 303,
+         "left": 354
       },
-      "ring" : {
-         "color" : "#9c27b0",
-         "name" : "Develop",
-         "shape" : "circle",
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 600
+      "ring": {
+         "color": "#9c27b0",
+         "name": "Develop",
+         "shape": "circle",
+         "startingPosition": {
+            "top": 0,
+            "left": 600
          }
       },
-      "index" : 14
+      "index": 14
    },
-   "Snyk" : {
-      "canvasPosition" : {
-         "top" : 386,
-         "left" : 368
+   "Snyk": {
+      "canvasPosition": {
+         "top": 386,
+         "left": 368
       },
-      "ring" : {
-         "startingPosition" : {
-            "top" : 620,
-            "left" : 600
+      "ring": {
+         "startingPosition": {
+            "top": 620,
+            "left": 600
          },
-         "color" : "#009688",
-         "name" : "Operate",
-         "shape" : "triangle"
+         "color": "#009688",
+         "name": "Operate",
+         "shape": "triangle"
       },
-      "index" : 22,
-      "name" : "Snyk",
-      "phase" : {
-         "type" : "Trial",
-         "ringNo" : 1
+      "index": 22,
+      "name": "Snyk",
+      "phase": {
+         "type": "Trial",
+         "ringNo": 1
       }
    },
-   "BDD" : {
-      "index" : 18,
-      "ring" : {
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 0
+   "BDD": {
+      "index": 18,
+      "ring": {
+         "startingPosition": {
+            "top": 0,
+            "left": 0
          },
-         "color" : "#3f51b5",
-         "name" : "Build",
-         "shape" : "circle"
+         "color": "#3f51b5",
+         "name": "Build",
+         "shape": "circle"
       },
-      "canvasPosition" : {
-         "top" : 267.333312988281,
-         "left" : 279
+      "canvasPosition": {
+         "top": 267.333312988281,
+         "left": 279
       },
-      "name" : "BDD",
-      "phase" : {
-         "type" : "Adopt",
-         "ringNo" : 0
+      "name": "BDD",
+      "phase": {
+         "type": "Adopt",
+         "ringNo": 0
       }
    },
-   "CloudFormation" : {
-      "canvasPosition" : {
-         "left" : 242,
-         "top" : 331
+   "CloudFormation": {
+      "canvasPosition": {
+         "left": 242,
+         "top": 331
       },
-      "index" : 5,
-      "ring" : {
-         "startingPosition" : {
-            "left" : 0,
-            "top" : 620
+      "index": 5,
+      "ring": {
+         "startingPosition": {
+            "left": 0,
+            "top": 620
          },
-         "color" : "#ff5722",
-         "shape" : "triangle",
-         "name" : "Deploy"
+         "color": "#ff5722",
+         "shape": "triangle",
+         "name": "Deploy"
       },
-      "phase" : {
-         "type" : "Adopt",
-         "ringNo" : 0
+      "phase": {
+         "type": "Adopt",
+         "ringNo": 0
       },
-      "name" : "CloudFormation"
+      "name": "CloudFormation"
    },
-   "CodeBuild" : {
-      "name" : "CodeBuild",
-      "phase" : {
-         "ringNo" : 0,
-         "type" : "Adopt"
+   "CodeBuild": {
+      "name": "CodeBuild",
+      "phase": {
+         "ringNo": 0,
+         "type": "Adopt"
       },
-      "canvasPosition" : {
-         "top" : 285.266662597656,
-         "left" : 271.25
+      "canvasPosition": {
+         "top": 285.266662597656,
+         "left": 271.25
       },
-      "ring" : {
-         "name" : "Build",
-         "shape" : "circle",
-         "color" : "#3f51b5",
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 0
+      "ring": {
+         "name": "Build",
+         "shape": "circle",
+         "color": "#3f51b5",
+         "startingPosition": {
+            "top": 0,
+            "left": 0
          }
       },
-      "index" : 7
+      "index": 7
    },
-   "React" : {
-      "name" : "React",
-      "phase" : {
-         "ringNo" : 0,
-         "type" : "Adopt"
+   "React": {
+      "name": "React",
+      "phase": {
+         "ringNo": 0,
+         "type": "Adopt"
       },
-      "canvasPosition" : {
-         "top" : 277,
-         "left" : 333
+      "canvasPosition": {
+         "top": 277,
+         "left": 333
       },
-      "index" : 1,
-      "ring" : {
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 600
+      "index": 1,
+      "ring": {
+         "startingPosition": {
+            "top": 0,
+            "left": 600
          },
-         "color" : "#9c27b0",
-         "name" : "Develop",
-         "shape" : "circle"
+         "color": "#9c27b0",
+         "name": "Develop",
+         "shape": "circle"
       }
    },
-   "Travis" : {
-      "canvasPosition" : {
-         "top" : 276.266662597656,
-         "left" : 249.25
+   "Travis": {
+      "canvasPosition": {
+         "top": 276.266662597656,
+         "left": 249.25
       },
-      "index" : 10,
-      "ring" : {
-         "shape" : "circle",
-         "name" : "Build",
-         "color" : "#3f51b5",
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 0
+      "index": 10,
+      "ring": {
+         "shape": "circle",
+         "name": "Build",
+         "color": "#3f51b5",
+         "startingPosition": {
+            "top": 0,
+            "left": 0
          }
       },
-      "phase" : {
-         "type" : "Adopt",
-         "ringNo" : 0
+      "phase": {
+         "type": "Adopt",
+         "ringNo": 0
       },
-      "name" : "Travis"
+      "name": "Travis"
    },
-   "Cucumber" : {
-      "canvasPosition" : {
-         "top" : 291,
-         "left" : 304
+   "Cucumber": {
+      "canvasPosition": {
+         "top": 291,
+         "left": 304
       },
-      "ring" : {
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 0
+      "ring": {
+         "startingPosition": {
+            "left": 600,
+            "top": 0
          },
-         "color" : "#9c27b0",
-         "name" : "Develop",
-         "shape" : "circle"
+         "color": "#9c27b0",
+         "name": "Develop",
+         "shape": "circle"
       },
-      "index" : 16,
-      "phase" : {
-         "ringNo" : 0,
-         "type" : "Adopt"
+      "index": 16,
+      "phase": {
+         "ringNo": 0,
+         "type": "Adopt"
       },
-      "name" : "Cucumber"
+      "name": "Cucumber"
    },
-   "CodePipeline" : {
-      "canvasPosition" : {
-         "left" : 271,
-         "top" : 372.966674804688
+   "CodePipeline": {
+      "canvasPosition": {
+         "left": 271,
+         "top": 372.966674804688
       },
-      "index" : 13,
-      "ring" : {
-         "name" : "Deploy",
-         "shape" : "triangle",
-         "color" : "#ff5722",
-         "startingPosition" : {
-            "left" : 0,
-            "top" : 620
+      "index": 13,
+      "ring": {
+         "name": "Deploy",
+         "shape": "triangle",
+         "color": "#ff5722",
+         "startingPosition": {
+            "left": 0,
+            "top": 620
          }
       },
-      "phase" : {
-         "type" : "Adopt",
-         "ringNo" : 0
+      "phase": {
+         "type": "Adopt",
+         "ringNo": 0
       },
-      "name" : "CodePipeline"
+      "name": "CodePipeline"
    },
-   "git" : {
-      "canvasPosition" : {
-         "top" : 258.466659545898,
-         "left" : 308
+   "git": {
+      "canvasPosition": {
+         "top": 258.466659545898,
+         "left": 308
       },
-      "ring" : {
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 0
+      "ring": {
+         "startingPosition": {
+            "left": 600,
+            "top": 0
          },
-         "color" : "#9c27b0",
-         "shape" : "circle",
-         "name" : "Develop"
+         "color": "#9c27b0",
+         "shape": "circle",
+         "name": "Develop"
       },
-      "index" : 0,
-      "phase" : {
-         "type" : "Adopt",
-         "ringNo" : 0
+      "index": 0,
+      "phase": {
+         "type": "Adopt",
+         "ringNo": 0
       },
-      "name" : "git"
+      "name": "git"
    },
-   "Localstack" : {
-      "phase" : {
-         "type" : "Hold",
-         "ringNo" : 3
+   "Localstack": {
+      "phase": {
+         "type": "Hold",
+         "ringNo": 3
       },
-      "name" : "Localstack",
-      "canvasPosition" : {
-         "top" : 70,
-         "left" : 324
+      "name": "Localstack",
+      "canvasPosition": {
+         "top": 70,
+         "left": 324
       },
-      "ring" : {
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 0
+      "ring": {
+         "startingPosition": {
+            "left": 600,
+            "top": 0
          },
-         "name" : "Develop",
-         "shape" : "circle",
-         "color" : "#9c27b0"
+         "name": "Develop",
+         "shape": "circle",
+         "color": "#9c27b0"
       },
-      "index" : 23
+      "index": 23
    },
-   "AWS CDK" : {
-      "ring" : {
-         "startingPosition" : {
-            "top" : 620,
-            "left" : 0
+   "AWS CDK": {
+      "ring": {
+         "startingPosition": {
+            "top": 620,
+            "left": 0
          },
-         "name" : "Deploy",
-         "shape" : "triangle",
-         "color" : "#ff5722"
+         "name": "Deploy",
+         "shape": "triangle",
+         "color": "#ff5722"
       },
-      "index" : 6,
-      "canvasPosition" : {
-         "left" : 243,
-         "top" : 430.25
+      "index": 6,
+      "canvasPosition": {
+         "left": 243,
+         "top": 430.25
       },
-      "phase" : {
-         "ringNo" : 1,
-         "type" : "Trial"
+      "phase": {
+         "ringNo": 1,
+         "type": "Trial"
       },
-      "name" : "AWS CDK"
+      "name": "AWS CDK"
    },
-   "CloudWatch" : {
-      "phase" : {
-         "type" : "Adopt",
-         "ringNo" : 0
+   "CloudWatch": {
+      "phase": {
+         "type": "Adopt",
+         "ringNo": 0
       },
-      "name" : "CloudWatch",
-      "canvasPosition" : {
-         "left" : 316,
-         "top" : 355.966674804688
+      "name": "CloudWatch",
+      "canvasPosition": {
+         "left": 316,
+         "top": 355.966674804688
       },
-      "ring" : {
-         "color" : "#009688",
-         "shape" : "triangle",
-         "name" : "Operate",
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 620
+      "ring": {
+         "color": "#009688",
+         "shape": "triangle",
+         "name": "Operate",
+         "startingPosition": {
+            "left": 600,
+            "top": 620
          }
       },
-      "index" : 8
+      "index": 8
    },
-   "Mu" : {
-      "index" : 21,
-      "ring" : {
-         "startingPosition" : {
-            "top" : 620,
-            "left" : 0
+   "Mu": {
+      "index": 21,
+      "ring": {
+         "startingPosition": {
+            "top": 620,
+            "left": 0
          },
-         "color" : "#ff5722",
-         "shape" : "triangle",
-         "name" : "Deploy"
+         "color": "#ff5722",
+         "shape": "triangle",
+         "name": "Deploy"
       },
-      "canvasPosition" : {
-         "left" : 170.666687011719,
-         "top" : 349.616668701172
+      "canvasPosition": {
+         "left": 170.666687011719,
+         "top": 349.616668701172
       },
-      "phase" : {
-         "type" : "Trial",
-         "ringNo" : 1
+      "phase": {
+         "type": "Trial",
+         "ringNo": 1
       },
-      "name" : "Mu"
+      "name": "Mu"
    },
-   "Terraform" : {
-      "phase" : {
-         "ringNo" : 3,
-         "type" : "Hold"
+   "Terraform": {
+      "phase": {
+         "ringNo": 3,
+         "type": "Hold"
       },
-      "name" : "Terraform",
-      "ring" : {
-         "startingPosition" : {
-            "left" : 0,
-            "top" : 620
+      "name": "Terraform",
+      "ring": {
+         "startingPosition": {
+            "left": 0,
+            "top": 620
          },
-         "color" : "#ff5722",
-         "shape" : "triangle",
-         "name" : "Deploy"
+         "color": "#ff5722",
+         "shape": "triangle",
+         "name": "Deploy"
       },
-      "index" : 24,
-      "canvasPosition" : {
-         "top" : 545,
-         "left" : 259
+      "index": 24,
+      "canvasPosition": {
+         "top": 545,
+         "left": 259
       }
    },
-   "Kubernetes" : {
-      "phase" : {
-         "ringNo" : 1,
-         "type" : "Trial"
+   "Kubernetes": {
+      "phase": {
+         "ringNo": 1,
+         "type": "Trial"
       },
-      "name" : "Kubernetes",
-      "index" : 20,
-      "ring" : {
-         "startingPosition" : {
-            "top" : 620,
-            "left" : 0
+      "name": "Kubernetes",
+      "index": 20,
+      "ring": {
+         "startingPosition": {
+            "top": 620,
+            "left": 0
          },
-         "name" : "Deploy",
-         "shape" : "triangle",
-         "color" : "#ff5722"
+         "name": "Deploy",
+         "shape": "triangle",
+         "color": "#ff5722"
       },
-      "canvasPosition" : {
-         "left" : 219.666687011719,
-         "top" : 366.333312988281
+      "canvasPosition": {
+         "left": 219.666687011719,
+         "top": 366.333312988281
       }
    },
-   "Rust" : {
-      "canvasPosition" : {
-         "top" : 33,
-         "left" : 345
+   "Rust": {
+      "canvasPosition": {
+         "top": 33,
+         "left": 345
       },
-      "index" : 9,
-      "ring" : {
-         "color" : "#9c27b0",
-         "shape" : "circle",
-         "name" : "Develop",
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 600
+      "index": 9,
+      "ring": {
+         "color": "#9c27b0",
+         "shape": "circle",
+         "name": "Develop",
+         "startingPosition": {
+            "top": 0,
+            "left": 600
          }
       },
-      "name" : "Rust",
-      "phase" : {
-         "ringNo" : 3,
-         "type" : "Hold"
+      "name": "Rust",
+      "phase": {
+         "ringNo": 3,
+         "type": "Hold"
       }
    },
-   ".Net" : {
-      "canvasPosition" : {
-         "top" : 284,
-         "left" : 535
+   ".Net": {
+      "canvasPosition": {
+         "top": 284,
+         "left": 535
       },
-      "ring" : {
-         "color" : "#9c27b0",
-         "name" : "Develop",
-         "shape" : "circle",
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 0
+      "ring": {
+         "color": "#9c27b0",
+         "name": "Develop",
+         "shape": "circle",
+         "startingPosition": {
+            "left": 600,
+            "top": 0
          }
       },
-      "index" : 19,
-      "phase" : {
-         "ringNo" : 3,
-         "type" : "Hold"
+      "index": 19,
+      "phase": {
+         "ringNo": 3,
+         "type": "Hold"
       },
-      "name" : ".Net"
+      "name": ".Net"
    },
-   "Docker" : {
-      "phase" : {
-         "ringNo" : 0,
-         "type" : "Adopt"
+   "Docker": {
+      "phase": {
+         "ringNo": 0,
+         "type": "Adopt"
       },
-      "name" : "Docker",
-      "canvasPosition" : {
-         "top" : 298,
-         "left" : 260
+      "name": "Docker",
+      "canvasPosition": {
+         "top": 298,
+         "left": 260
       },
-      "index" : 17,
-      "ring" : {
-         "color" : "#3f51b5",
-         "shape" : "circle",
-         "name" : "Build",
-         "startingPosition" : {
-            "top" : 0,
-            "left" : 0
+      "index": 17,
+      "ring": {
+         "color": "#3f51b5",
+         "shape": "circle",
+         "name": "Build",
+         "startingPosition": {
+            "top": 0,
+            "left": 0
          }
       }
    },
-   "Pulumi" : {
-      "name" : "Pulumi",
-      "phase" : {
-         "ringNo" : 3,
-         "type" : "Hold"
+   "Pulumi": {
+      "name": "Pulumi",
+      "phase": {
+         "ringNo": 3,
+         "type": "Hold"
       },
-      "index" : 25,
-      "ring" : {
-         "startingPosition" : {
-            "top" : 620,
-            "left" : 0
+      "index": 25,
+      "ring": {
+         "startingPosition": {
+            "top": 620,
+            "left": 0
          },
-         "color" : "#ff5722",
-         "name" : "Deploy",
-         "shape" : "triangle"
+         "color": "#ff5722",
+         "name": "Deploy",
+         "shape": "triangle"
       },
-      "canvasPosition" : {
-         "top" : 601,
-         "left" : 260
+      "canvasPosition": {
+         "top": 601,
+         "left": 260
       }
    },
-   "Cloud Conformity" : {
-      "name" : "Cloud Conformity",
-      "phase" : {
-         "type" : "Trial",
-         "ringNo" : 1
+   "Cloud Conformity": {
+      "name": "Cloud Conformity",
+      "phase": {
+         "type": "Trial",
+         "ringNo": 1
       },
-      "canvasPosition" : {
-         "left" : 411,
-         "top" : 348
+      "canvasPosition": {
+         "left": 411,
+         "top": 348
       },
-      "index" : 15,
-      "ring" : {
-         "startingPosition" : {
-            "top" : 620,
-            "left" : 600
+      "index": 15,
+      "ring": {
+         "startingPosition": {
+            "top": 620,
+            "left": 600
          },
-         "shape" : "triangle",
-         "name" : "Operate",
-         "color" : "#009688"
+         "shape": "triangle",
+         "name": "Operate",
+         "color": "#009688"
       }
    },
-   "New Relic" : {
-      "phase" : {
-         "type" : "Trial",
-         "ringNo" : 1
+   "New Relic": {
+      "phase": {
+         "type": "Trial",
+         "ringNo": 1
       },
-      "name" : "New Relic",
-      "canvasPosition" : {
-         "top" : 382.966674804688,
-         "left" : 387
+      "name": "New Relic",
+      "canvasPosition": {
+         "top": 382.966674804688,
+         "left": 387
       },
-      "index" : 12,
-      "ring" : {
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 620
+      "index": 12,
+      "ring": {
+         "startingPosition": {
+            "left": 600,
+            "top": 620
          },
-         "color" : "#009688",
-         "name" : "Operate",
-         "shape" : "triangle"
+         "color": "#009688",
+         "name": "Operate",
+         "shape": "triangle"
       }
    },
-   "Sumo" : {
-      "index" : 3,
-      "ring" : {
-         "startingPosition" : {
-            "left" : 600,
-            "top" : 620
+   "Sumo": {
+      "index": 3,
+      "ring": {
+         "startingPosition": {
+            "left": 600,
+            "top": 620
          },
-         "color" : "#009688",
-         "name" : "Operate",
-         "shape" : "triangle"
+         "color": "#009688",
+         "name": "Operate",
+         "shape": "triangle"
       },
-      "canvasPosition" : {
-         "left" : 325,
-         "top" : 405
+      "canvasPosition": {
+         "left": 325,
+         "top": 405
       },
-      "phase" : {
-         "ringNo" : 1,
-         "type" : "Trial"
+      "phase": {
+         "ringNo": 1,
+         "type": "Trial"
       },
-      "name" : "Sumo"
+      "name": "Sumo"
    }
 }
