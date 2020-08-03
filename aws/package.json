@@ -25,7 +25,7 @@
     "@aws-cdk/aws-route53": "^0.22.0",
     "@aws-cdk/aws-s3": "^0.22.0",
     "@aws-cdk/cdk": "^0.22.0",
-    "@types/node": "^10.17.6"
+    "@types/node": "^10.17.27"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.4",
