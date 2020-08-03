@@ -24,7 +24,7 @@
     "@aws-cdk/aws-iam": "^0.39.0",
     "@aws-cdk/aws-route53": "^0.22.0",
     "@aws-cdk/aws-s3": "^0.22.0",
-    "@aws-cdk/cdk": "^0.22.0",
+    "@aws-cdk/cdk": "^0.35.0",
     "@types/node": "^10.17.6"
   },
   "devDependencies": {
