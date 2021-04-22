@@ -5,6 +5,8 @@ on: pull_request
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - uses: hmarr/auto-approve-action@v2.0.0
         if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
